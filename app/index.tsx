@@ -35,7 +35,10 @@ export default function IndexScreen() {
         return data.filter(item => item.name.toLowerCase().includes(lowerCaseFilter))
     }, [filter])
     let totalPrice = useMemo(() => {
-        return data.reduce((sum, item) => sum + item.price, 0)
+        const sum = data.reduce((sum, item) => sum + item.price, 0)
+        return sum.toLocaleString('en-US', { 
+            minimumFractionDigits: 2, maximumFractionDigits: 2 
+        })
     }, [data]);
 
     const showModal = () => setDisplayModal(true)
