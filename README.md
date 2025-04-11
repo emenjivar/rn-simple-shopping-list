@@ -24,4 +24,5 @@ cd rn-simple-shopping-list
 ## Demo video
 You can watch the video showcaging the app functionality here:
 
-[Demo video](.github/demo-physical-android.mp4)
+https://github.com/user-attachments/assets/797250b5-acd7-4966-a881-8fd8c86f53d2
+
