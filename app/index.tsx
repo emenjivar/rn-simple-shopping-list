@@ -3,6 +3,7 @@ import { Item } from "../components/Item";
 import { useMemo, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import { ItemModal } from "./NewItemModal";
+import { Dimensions } from "@/constants/Dimensions";
 
 export type ItemProp = {
     name: string,
@@ -52,7 +53,7 @@ export default function IndexScreen() {
                 justifyContent: 'space-between', 
                 marginTop: 40, 
                 marginBottom: 10,
-                paddingHorizontal: 20
+                paddingHorizontal: Dimensions.horizontalSpace
             }}>
                 <Text style={{ fontSize: 18, fontWeight: 'bold' }}>Shopping list</Text>
                 <Text style={{ fontSize: 15 }}>${totalPrice}</Text>
@@ -60,7 +61,7 @@ export default function IndexScreen() {
             
             <SearchBar 
                 text={filter} 
-                style={{ marginHorizontal: 15 }}
+                style={{ marginHorizontal: Dimensions.horizontalSpace }}
                 placeholder="E.g. Coffee" 
                 onChangeText={setFilter}/>
             <FlatList 
@@ -72,7 +73,7 @@ export default function IndexScreen() {
                     price={item.price}
                     marked={item.marked} 
                     color={item.color}
-                    style={{ marginHorizontal: 15 }}
+                    style={{ marginHorizontal: Dimensions.horizontalSpace }}
                     onSelect={(selected) => {
                         let updated = [...data]
                         updated[index] = {...updated[index], marked: selected}

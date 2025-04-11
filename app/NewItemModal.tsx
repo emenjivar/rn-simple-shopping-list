@@ -3,6 +3,7 @@ import { ItemProp } from "."
 import { useMemo, useState } from "react";
 import { ColoredRadioButton } from "../components/ColoredRadioButton";
 import { Ionicons } from "@expo/vector-icons";
+import { Dimensions } from "@/constants/Dimensions";
 
 type Props = {
     style?: ViewStyle,
@@ -59,7 +60,7 @@ export function ItemModal({ style, onAddItem, onClickClose}: Props) {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'white',
-        padding: 15,
+        padding: Dimensions.horizontalSpace,
         alignItems: 'center',
         borderTopStartRadius: 15,
         borderTopEndRadius: 15
