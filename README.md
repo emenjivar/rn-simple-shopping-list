@@ -18,7 +18,12 @@ cd rn-simple-shopping-list
 
 3. Install the dependencies
 ```bash
+npm install
+```
 
+4. Run the project
+```bash
+npx expo start
 ```
 
 ## Demo video
