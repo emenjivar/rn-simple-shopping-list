@@ -54,10 +54,6 @@ const initialDataSource: ItemProp[] = [
     }
 ];
 
-/**
- * I have no idea how it works under the hood,
- * it's a simple copy paste
- */
 export function generateId(): string {
     return Math.random().toString(36).substring(2,9)
 }
