@@ -1,7 +1,7 @@
 import { Button, Modal, StyleSheet, Text, TextInput, TouchableOpacity, View, ViewStyle } from "react-native";
 import { ItemProp } from "."
 import { useMemo, useState } from "react";
-import { ColoredRadioButton } from "./ColoredRadioButton";
+import { ColoredRadioButton } from "../components/ColoredRadioButton";
 import { Ionicons } from "@expo/vector-icons";
 
 type Props = {
@@ -19,7 +19,7 @@ export function ItemModal({ style, onAddItem, onClickClose}: Props) {
         return name.length == 0 || isNaN(number) || number <= 0
     }, [name, price]);
 
-    const handleAddProducto = () => {
+    const handleAddProducto = () : void => {
         let newProduct: ItemProp = {
             name: name,
             marked: false,

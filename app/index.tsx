@@ -1,9 +1,8 @@
 import { Button, FlatList, Modal, Platform, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { Item } from "./item";
+import { Item } from "../components/Item";
 import { useMemo, useState } from "react";
-import SearchBar from "./SearchBar";
-import RoundedButton from "./RoundedButton";
-import { ItemModal } from "./ItemModal";
+import SearchBar from "../components/SearchBar";
+import { ItemModal } from "./NewItemModal";
 
 export type ItemProp = {
     name: string,

@@ -1,6 +1,6 @@
-import { Button, StyleSheet, Text, TouchableOpacity, View, ViewStyle } from "react-native"
-import { Checkbox } from "./checkbox";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { StyleSheet, Text, TouchableOpacity, View, ViewStyle } from "react-native"
+import { Checkbox } from "./Checkbox";
+import { Ionicons } from "@expo/vector-icons";
 
 type ShopItemProp  = {
     name: string,
