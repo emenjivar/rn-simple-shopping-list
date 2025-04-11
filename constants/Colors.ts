@@ -24,3 +24,11 @@ export const Colors = {
     tabIconSelected: tintColorDark,
   },
 };
+
+export const Pallete = {
+  red: "#D84B16", // Tomato Red
+  yellow: "#FFB400", // Golden Yellow
+  green: "#7BBF6A", // Lettuce Green
+  purple: "#5E2A8C", // Eggplant Purple
+  pink: "#F1A7C1", // Strawberry Pink
+}

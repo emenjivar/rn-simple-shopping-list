@@ -3,13 +3,15 @@ import { StyleSheet, TouchableOpacity } from "react-native";
 
 type Props = {
     checked: boolean,
+    disable?: boolean,
     onClick: (value: boolean) => void
 }
 
-export function Checkbox({ checked, onClick }: Props) {
+export function Checkbox({ checked, disable = false, onClick }: Props) {
     return (
         <TouchableOpacity 
             style={[styles.checkbox, checked && styles.selected]} 
+            disabled={disable}
             onPress={() => { onClick(!checked) }}>
             {checked && <Ionicons name="checkmark" size={15} color="white" />}
         </TouchableOpacity>

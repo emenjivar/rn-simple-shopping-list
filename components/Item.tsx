@@ -2,24 +2,37 @@ import { StyleSheet, Text, TouchableOpacity, View, ViewStyle } from "react-nativ
 import { Checkbox } from "./Checkbox";
 import { Ionicons } from "@expo/vector-icons";
 
-type ShopItemProp  = {
+type Props  = {
     name: string,
     price: number,
     marked: boolean,
     color: string,
     style?: ViewStyle,
+    disable?: boolean,
     onSelect: (selected: boolean) => void,
     onDelete: () => void
 }
 
 const capitalize = (text: string) => text.charAt(0).toUpperCase() + text.slice(1)
 
-export function Item({name, price, marked, color, style, onSelect, onDelete}: ShopItemProp) {
+export function Item({
+    name, 
+    price, 
+    marked, 
+    color, 
+    style, 
+    disable = false,
+    onSelect, 
+    onDelete
+}: Props) {
     return(
         <View style={[styles.container, style]}>
             <View style={[styles.row, { paddingHorizontal: 10 }]}>
                 <View style={styles.row}>
-                    <Checkbox checked={marked} onClick={onSelect} />
+                    <Checkbox 
+                        checked={marked} 
+                        disable={disable}
+                        onClick={onSelect} />
                     <View style={{width: 10 }} />
                     <Text style={[styles.title, marked && styles.striketext]}>{capitalize(name)} - ${price}</Text>
                 </View>
